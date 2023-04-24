@@ -1,3 +1,10 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json"
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "types": ["jest", "node"],
+
+    /* Completeness */
+    "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
+    "noImplicitAny": false
+  },
 }
