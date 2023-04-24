@@ -1,6 +1,8 @@
 import React from 'react';
 
-import {SearchInput} from '../../components/SearchInput';
+import {useNavigation} from '@react-navigation/native';
+
+import {HomeInput} from '../../components/HomeInput';
 import {PropertyCard} from '../../components/PropertyCard';
 import {EmptyComponent} from '../../components/EmptyComponent';
 
@@ -14,6 +16,12 @@ import {Container, Header, Logo, Title, List} from './styles';
 
 export function Home() {
   const [data, setData] = React.useState<Property[]>([]);
+
+  const {navigate} = useNavigation();
+
+  function navigateToSearch() {
+    navigate('Search' as never);
+  }
 
   React.useEffect(() => {
     async function getData() {
@@ -31,7 +39,10 @@ export function Home() {
           <LogoSvg />
         </Logo>
 
-        <SearchInput placeholder="Country, city, zip code..." />
+        <HomeInput
+          placeholder="Country, city, zip code..."
+          onPress={navigateToSearch}
+        />
       </Header>
 
       <Title>History</Title>
