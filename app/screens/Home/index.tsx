@@ -2,6 +2,7 @@ import React from 'react';
 
 import {SearchInput} from '../../components/SearchInput';
 import {PropertyCard} from '../../components/PropertyCard';
+import {EmptyComponent} from '../../components/EmptyComponent';
 
 import {api} from '../../server/api';
 
@@ -35,7 +36,11 @@ export function Home() {
 
       <Title>History</Title>
 
-      <List data={data} renderItem={({item}) => <PropertyCard data={item} />} />
+      <List
+        data={data}
+        renderItem={({item}) => <PropertyCard data={item} />}
+        ListEmptyComponent={EmptyComponent}
+      />
     </Container>
   );
 }

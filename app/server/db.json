@@ -31,7 +31,7 @@
         {"buyer": "Alisa Dženita", "seller": "Magni Hazal", "value": 1230800, "date": "1993-04-12T00:00:00.000Z"},
         {"buyer": "Magni Hazal", "seller": "-", "value": 0, "date": "1991-06-28T00:00:00.000Z"}
       ],
-      "view": true
+      "view": false
     },
     {
       "id": 2,
