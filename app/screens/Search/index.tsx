@@ -20,7 +20,7 @@ export function Search() {
   const [search, setSearch] = React.useState('');
   const [data, setData] = React.useState<Address[]>([]);
 
-  const {goBack} = useNavigation();
+  const {goBack, navigate} = useNavigation();
 
   function onChangeText(text: string) {
     clearTimeout(DEBOUNCE_TIMEOUT);
@@ -38,6 +38,17 @@ export function Search() {
       setData(response.data);
     } catch (err) {
       Alert.alert('Erro no servidor');
+    }
+  }
+
+  function onSelectAddress(address: Address) {
+    if (address) {
+      navigate(
+        'AddressProperties' as never,
+        {
+          address,
+        } as never,
+      );
     }
   }
 
@@ -60,7 +71,9 @@ export function Search() {
 
       <List
         data={data}
-        renderItem={({item}) => <AddressCard item={item} />}
+        renderItem={({item}) => (
+          <AddressCard item={item} onPress={() => onSelectAddress(item)} />
+        )}
         ListEmptyComponent={
           <EmptyComponent text="Matching addresses will be displayed here" />
         }

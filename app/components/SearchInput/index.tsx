@@ -8,7 +8,7 @@ import {Wrapper, Container, Icon} from './styles';
 
 interface Props extends TextInputProps {
   goBack: () => void;
-  clean: () => void;
+  clean?: () => void;
 }
 
 export const SearchInput = React.forwardRef<TextInput, Props>((props, ref) => {
@@ -20,9 +20,11 @@ export const SearchInput = React.forwardRef<TextInput, Props>((props, ref) => {
 
       <Container ref={ref} {...props} />
 
-      <Icon activeOpacity={0.7} onPress={props.clean}>
-        <CircleXSvg />
-      </Icon>
+      {props.clean !== undefined ?? (
+        <Icon activeOpacity={0.7} onPress={props.clean}>
+          <CircleXSvg />
+        </Icon>
+      )}
     </Wrapper>
   );
 });
