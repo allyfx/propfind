@@ -1,0 +1,79 @@
+{
+  "addresses": [
+    {
+      "id": 1, "street": "381 Garden Ave", "city": "Michigan", "state": "MI", "zipcode": "49424"
+    },
+    {
+      "id": 2, "street": "290 Shadow Ln", "city": "Virginia", "state": "VA", "zipcode": "24360"
+    },
+    {
+      "id": 3, "street": "2859 State 7 Rte", "city": "New York", "state": "NY", "zipcode": "12185"
+    }
+  ],
+  "properties": [
+    {
+      "id": 1,
+      "address_id": 1,
+      "name": "Wood House",
+      "year": 1991,
+      "type": "Residential",
+      "image": "house_1.svg",
+      "parcel_boundaries": "parcel_1.svg",
+      "county": {
+        "code": "081",
+        "name": "Kent"
+      },
+      "owner": {"name": "Alisa Dženita", "phone": "318-840-3017"},
+      "tax_bill": 123800,
+      "market_land_value": 1239998,
+      "market_land_total": 1230012,
+      "mortgage": [
+        {"buyer": "Alisa Dženita", "seller": "Magni Hazal", "value": 1230800, "date": "1993-04-12T00:00:00.000Z"},
+        {"buyer": "Magni Hazal", "seller": "-", "value": 0, "date": "1991-06-28T00:00:00.000Z"}
+      ],
+      "view": false
+    },
+    {
+      "id": 2,
+      "address_id": 1,
+      "name": "Shopping",
+      "year": 1993,
+      "type": "Commercial",
+      "image": "house_2.svg",
+      "parcel_boundaries": "parcel_2.svg",
+      "county": {
+        "code": "081",
+        "name": "Kent"
+      },
+      "owner": {"name": "Alisa Dženita", "phone": "318-840-3017"},
+      "tax_bill": 123800123,
+      "market_land_value": 123999812,
+      "market_land_total": 123001312,
+      "mortgage": [
+        {"buyer": "Alisa Dženita", "seller": "-", "value": 0, "date": "1993-04-12T00:00:00.000Z"}
+      ],
+      "view": false
+    },
+    {
+      "id": 3,
+      "address_id": 2,
+      "name": "Shopping",
+      "year": 1993,
+      "type": "Commercial",
+      "image": "house_2.svg",
+      "parcel_boundaries": "parcel_2.svg",
+      "county": {
+        "code": "081",
+        "name": "Kent"
+      },
+      "owner": {"name": "Alisa Dženita", "phone": "318-840-3017"},
+      "tax_bill": 123800123,
+      "market_land_value": 123999812,
+      "market_land_total": 123001312,
+      "mortgage": [
+        {"buyer": "Alisa Dženita", "seller": "-", "value": 0, "date": "1993-04-12T00:00:00.000Z"}
+      ],
+      "view": false
+    }
+  ]
+}
