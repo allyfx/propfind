@@ -9,13 +9,16 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {AppRoutes} from './app/navigators';
 import {ThemeProvider} from 'styled-components';
+import {GlobalStyles} from './app/styles/global';
 import {theme} from './app/styles/theme';
 
 function App() {
   return (
     <NavigationContainer>
       <ThemeProvider theme={theme}>
-        <AppRoutes />
+        <GlobalStyles>
+          <AppRoutes />
+        </GlobalStyles>
       </ThemeProvider>
     </NavigationContainer>
   );

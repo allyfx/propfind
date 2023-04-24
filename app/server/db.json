@@ -13,11 +13,11 @@
   "properties": [
     {
       "id": 1,
-      "address_id": 1,
+      "addressId": 1,
       "name": "Wood House",
       "year": 1991,
       "type": "Residential",
-      "image": "house_1.svg",
+      "image": "https://images.unsplash.com/photo-1551354907-80361e454f5a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       "parcel_boundaries": "parcel_1.svg",
       "county": {
         "code": "081",
@@ -31,15 +31,15 @@
         {"buyer": "Alisa Dženita", "seller": "Magni Hazal", "value": 1230800, "date": "1993-04-12T00:00:00.000Z"},
         {"buyer": "Magni Hazal", "seller": "-", "value": 0, "date": "1991-06-28T00:00:00.000Z"}
       ],
-      "view": false
+      "view": true
     },
     {
       "id": 2,
-      "address_id": 1,
+      "addressId": 1,
       "name": "Shopping",
       "year": 1993,
       "type": "Commercial",
-      "image": "house_2.svg",
+      "image": "https://images.unsplash.com/photo-1481437156560-3205f6a55735?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=895&q=80",
       "parcel_boundaries": "parcel_2.svg",
       "county": {
         "code": "081",
@@ -56,11 +56,11 @@
     },
     {
       "id": 3,
-      "address_id": 2,
+      "addressId": 2,
       "name": "Shopping",
       "year": 1993,
       "type": "Commercial",
-      "image": "house_2.svg",
+      "image": "https://images.unsplash.com/photo-1481437156560-3205f6a55735?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=895&q=80",
       "parcel_boundaries": "parcel_2.svg",
       "county": {
         "code": "081",
