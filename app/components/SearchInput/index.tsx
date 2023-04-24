@@ -1,19 +1,28 @@
 import React from 'react';
-import {TextInputProps} from 'react-native';
+import {TextInput, TextInputProps} from 'react-native';
 
-import SearchSvg from '../../assets/icons/search.svg';
+import ChevronLeftSvg from '../../assets/icons/chevron-left.svg';
+import CircleXSvg from '../../assets/icons/circle-x.svg';
 
 import {Wrapper, Container, Icon} from './styles';
 
-interface Props extends TextInputProps {}
+interface Props extends TextInputProps {
+  goBack: () => void;
+  clean: () => void;
+}
 
-export function SearchInput(props: Props) {
+export const SearchInput = React.forwardRef<TextInput, Props>((props, ref) => {
   return (
     <Wrapper>
-      <Container {...props} />
-      <Icon>
-        <SearchSvg />
+      <Icon activeOpacity={0.7} onPress={props.goBack}>
+        <ChevronLeftSvg />
+      </Icon>
+
+      <Container ref={ref} {...props} />
+
+      <Icon activeOpacity={0.7} onPress={props.clean}>
+        <CircleXSvg />
       </Icon>
     </Wrapper>
   );
-}
+});

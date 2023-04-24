@@ -1,3 +1,5 @@
+import {Address} from '../AddressCard/dto';
+
 export interface Property {
   id: number;
   name: string;
@@ -22,12 +24,6 @@ export interface Property {
     value: number;
     date: string;
   }[];
-  address: {
-    id: number;
-    city: string;
-    state: string;
-    street: string;
-    zipcode: string;
-  };
+  address: Address;
   view: boolean;
 }
