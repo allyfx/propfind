@@ -23,7 +23,7 @@
         "code": "081",
         "name": "Kent"
       },
-      "owner": {"name": "Alisa Dženita", "phone": "318-840-3017"},
+      "owner": {"name": "Alisa Dženita", "phone": "318-840-3017", "address": "1054 forest court apt roeland park ks 66219"},
       "tax_bill": 123800,
       "market_land_value": 1239998,
       "market_land_total": 1230012,
@@ -45,7 +45,7 @@
         "code": "081",
         "name": "Kent"
       },
-      "owner": {"name": "Alisa Dženita", "phone": "318-840-3017"},
+      "owner": {"name": "Alisa Dženita", "phone": "318-840-3017", "address": "1054 forest court apt roeland park ks 66219"},
       "tax_bill": 123800123,
       "market_land_value": 123999812,
       "market_land_total": 123001312,
@@ -66,7 +66,7 @@
         "code": "081",
         "name": "Kent"
       },
-      "owner": {"name": "Alisa Dženita", "phone": "318-840-3017"},
+      "owner": {"name": "Alisa Dženita", "phone": "318-840-3017", "address": "1054 forest court apt roeland park ks 66219"},
       "tax_bill": 123800123,
       "market_land_value": 123999812,
       "market_land_total": 123001312,

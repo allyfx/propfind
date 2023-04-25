@@ -26,7 +26,11 @@ export function AddressProperties() {
   const route = useRoute();
   const {address} = route.params as Params;
 
-  const {goBack} = useNavigation();
+  const {goBack, navigate} = useNavigation();
+
+  function navigateToSpecificProperty(property: Property) {
+    navigate('Property' as never, {property} as never);
+  }
 
   React.useEffect(() => {
     async function getData() {
@@ -56,7 +60,12 @@ export function AddressProperties() {
 
       <List
         data={data}
-        renderItem={({item}) => <PropertyCard data={item} />}
+        renderItem={({item}) => (
+          <PropertyCard
+            data={item}
+            onPress={() => navigateToSpecificProperty(item)}
+          />
+        )}
         ListEmptyComponent={
           <EmptyComponent text="This address has no properties available" />
         }

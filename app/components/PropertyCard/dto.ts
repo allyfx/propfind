@@ -14,6 +14,7 @@ export interface Property {
   owner: {
     name: string;
     phone: string;
+    address: string;
   };
   tax_bill: number;
   market_land_value: number;

@@ -23,6 +23,10 @@ export function Home() {
     navigate('Search' as never);
   }
 
+  function navigateToSpecificProperty(property: Property) {
+    navigate('Property' as never, {property} as never);
+  }
+
   React.useEffect(() => {
     async function getData() {
       const response = await api.get('/properties?view=true&_expand=address');
@@ -49,7 +53,12 @@ export function Home() {
 
       <List
         data={data}
-        renderItem={({item}) => <PropertyCard data={item} />}
+        renderItem={({item}) => (
+          <PropertyCard
+            data={item}
+            onPress={() => navigateToSpecificProperty(item)}
+          />
+        )}
         ListEmptyComponent={EmptyComponent}
       />
     </Container>

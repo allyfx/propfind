@@ -26,9 +26,9 @@ interface Props extends TouchableOpacityProps {
   data: Property;
 }
 
-export function PropertyCard({data}: Props) {
+export function PropertyCard({data, ...props}: Props) {
   return (
-    <Container activeOpacity={0.7}>
+    <Container activeOpacity={0.7} {...props}>
       <Row>
         <Column>
           <ImageContainer>
