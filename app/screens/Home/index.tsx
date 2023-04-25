@@ -1,7 +1,5 @@
 import React from 'react';
 
-import {useNavigation} from '@react-navigation/native';
-
 import {HomeInput} from '../../components/HomeInput';
 import {PropertyCard} from '../../components/PropertyCard';
 import {EmptyComponent} from '../../components/EmptyComponent';
@@ -14,17 +12,15 @@ import LogoSvg from '../../assets/logo.svg';
 
 import {Container, Header, Logo, Title, List} from './styles';
 
-export function Home() {
+export function Home({navigation}) {
   const [data, setData] = React.useState<Property[]>([]);
 
-  const {navigate} = useNavigation();
-
   function navigateToSearch() {
-    navigate('Search' as never);
+    navigation.navigate('Search' as never);
   }
 
   function navigateToSpecificProperty(property: Property) {
-    navigate('Property' as never, {property} as never);
+    navigation.navigate('Property' as never, {property} as never);
   }
 
   React.useEffect(() => {
@@ -44,6 +40,7 @@ export function Home() {
         </Logo>
 
         <HomeInput
+          testID="home_input_id"
           placeholder="Country, city, zip code..."
           onPress={navigateToSearch}
         />
