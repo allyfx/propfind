@@ -9,6 +9,8 @@ import ChevronLeftSvg from '../../assets/icons/chevron-left.svg';
 import Parcel1 from '../../assets/parcels_1.svg';
 import Parcel2 from '../../assets/parcels_2.svg';
 
+import {api} from '../../server/api';
+
 import {
   Container,
   ImageContainer,
@@ -47,6 +49,16 @@ export function Property() {
     const dateToFormat = new Date(date);
     return `${dateToFormat.getFullYear()}-${dateToFormat.getMonth()}-${dateToFormat.getDate()}`;
   }
+
+  React.useEffect(() => {
+    async function setViewed() {
+      await api.put(`/properties/${property.id}`, {
+        viewd: true,
+      });
+    }
+
+    setViewed();
+  }, [property]);
 
   return (
     <Container>
