@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 
-import {useNavigation, useRoute} from '@react-navigation/native';
+import {useRoute} from '@react-navigation/native';
 
 import {Property as IProperty} from '../../components/PropertyCard/dto';
 
@@ -40,8 +40,7 @@ interface Params {
   property: IProperty;
 }
 
-export function Property() {
-  const {goBack} = useNavigation();
+export function Property({navigation}) {
   const route = useRoute();
   const {property} = route.params as Params;
 
@@ -65,7 +64,10 @@ export function Property() {
       <ImageContainer>
         <Image resizeMode="stretch" source={{uri: property.image}} />
 
-        <GoBackButton activeOpacity={0.7} onPress={goBack}>
+        <GoBackButton
+          testID="property-button"
+          activeOpacity={0.7}
+          onPress={navigation.goBack}>
           <ChevronLeftSvg />
         </GoBackButton>
       </ImageContainer>
