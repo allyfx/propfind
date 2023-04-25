@@ -14,14 +14,14 @@ interface Props extends TextInputProps {
 export const SearchInput = React.forwardRef<TextInput, Props>((props, ref) => {
   return (
     <Wrapper>
-      <Icon activeOpacity={0.7} onPress={props.goBack}>
+      <Icon activeOpacity={0.7} onPress={props.goBack} testID="goback_button">
         <ChevronLeftSvg />
       </Icon>
 
-      <Container ref={ref} {...props} />
+      <Container testID="search_input" ref={ref} {...props} />
 
       {props.clean !== undefined ?? (
-        <Icon activeOpacity={0.7} onPress={props.clean}>
+        <Icon activeOpacity={0.7} onPress={props.clean} testID="clean_button">
           <CircleXSvg />
         </Icon>
       )}

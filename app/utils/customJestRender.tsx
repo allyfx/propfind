@@ -1,10 +1,15 @@
 import React from 'react';
 import {render} from '@testing-library/react-native';
+import {NavigationContainer} from '@react-navigation/native';
 import {ThemeProvider} from 'styled-components/native';
 import {theme} from '../styles/theme';
 
 function Providers({children}) {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return (
+    <NavigationContainer>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </NavigationContainer>
+  );
 }
 
 const customRender = (ui, options = {}) =>

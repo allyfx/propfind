@@ -1,7 +1,7 @@
 import React from 'react';
 import {Alert, TextInput} from 'react-native';
 
-import {useNavigation, useFocusEffect} from '@react-navigation/native';
+import {useFocusEffect} from '@react-navigation/native';
 
 import {SearchInput} from '../../components/SearchInput';
 import {EmptyComponent} from '../../components/EmptyComponent';
@@ -14,13 +14,13 @@ import {api} from '../../server/api';
 
 let DEBOUNCE_TIMEOUT: NodeJS.Timeout;
 
-export function Search() {
+export function Search({navigation}) {
   const inputRef = React.useRef<TextInput>(null);
 
   const [search, setSearch] = React.useState('');
   const [data, setData] = React.useState<Address[]>([]);
 
-  const {goBack, navigate} = useNavigation();
+  const {goBack, navigate} = navigation;
 
   function onChangeText(text: string) {
     clearTimeout(DEBOUNCE_TIMEOUT);
